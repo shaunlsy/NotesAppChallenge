@@ -25,3 +25,11 @@ As a programmer
 I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
+
+var note = new Note("Hello")
+var note2 = new Note("Goodbye")
+var noteList = new NoteList()
+noteList.storeNotes(note.text)
+noteList.storeNotes(note2.text)
+var noteListView = new NoteListView(noteList)
+noteListView.returnHTML()
