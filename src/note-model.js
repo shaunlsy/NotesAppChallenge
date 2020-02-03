@@ -1,14 +1,10 @@
 (function(exports) {
     'use strict'
 
-    function Note() {
-        this.text = [];
+    function Note(text) {
+        this.text = text
     }
-
-    Note.prototype.storeNotes = function(message) {
-        this.text.push(message);
-    }
-
+    
     Note.prototype.getNotes = function() {
         return this.text;
     }
