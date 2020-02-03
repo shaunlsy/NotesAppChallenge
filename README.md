@@ -2,6 +2,10 @@
 
 Makers Week 7 Afternoon Challenge
 
+### Application Overview
+
+- JavaScript front end
+
 ## User stories
 
 ```
