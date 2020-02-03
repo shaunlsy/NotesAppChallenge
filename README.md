@@ -28,8 +28,10 @@ So I can see all the information in the note
 
 var note = new Note("Hello")
 var note2 = new Note("Goodbye")
+var note3 = new Note("I am Shaun")
 var noteList = new NoteList()
 noteList.storeNotes(note.text)
 noteList.storeNotes(note2.text)
+noteList.storeNotes(note3.text)
 var noteListView = new NoteListView(noteList)
 noteListView.returnHTML()
