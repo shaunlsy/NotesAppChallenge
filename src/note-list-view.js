@@ -1,19 +1,21 @@
 (function(exports) {
-    "use strict"
+    "use strict";
 
     function NoteListView(noteList) {
         this.noteList = noteList;
     }
 
     NoteListView.prototype.returnHTML = function() {
-        var x = this.noteList.array
-        var array = []
-        for (let i = 0; i < x.length; i++) {
-            var string = "<li><div>" + x[i] + "</div></li>"
-            array.push(string)
+        var x = this.noteList.array;
+        var array = [];
+        for (var i = 0; i < x.length; i++) {
+            var string = "<li><div>" + x[i] + "</div></li>";
+            array.push(string);
         }
-        return "<ul>" + array.join("") + "</ul>"
-    }
+        return "<ul>" + array.join("") + "</ul>";
+        // document.getElementById("app").innerHTML =
+        //     "<ul>" + array.join("") + "</ul>";
+    };
 
     exports.NoteListView = NoteListView;
     exports.NoteListView.returnHTML = NoteListView.returnHTML;

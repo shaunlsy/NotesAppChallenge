@@ -1,14 +1,14 @@
 (function(exports) {
-    'use strict'
+    "use strict";
 
     function Note(text) {
-        this.text = text
+        this.text = text;
     }
 
-    Note.prototype.getNotes = function() {
+    Note.prototype.getNote = function() {
         return this.text;
-    }
+    };
 
     exports.Note = Note;
-    exports.Note.getNotes = Note.getNotes;
+    exports.Note.getNote = Note.getNote;
 })(this);
