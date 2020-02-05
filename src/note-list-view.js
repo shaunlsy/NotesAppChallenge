@@ -13,8 +13,6 @@
             array.push(string);
         }
         return "<ul>" + array.join("") + "</ul>";
-        // document.getElementById("app").innerHTML =
-        //     "<ul>" + array.join("") + "</ul>";
     };
 
     exports.NoteListView = NoteListView;

@@ -14,7 +14,7 @@
 (function testReturnHTML0Note() {
     var noteList = new NoteList();
     var noteListView = new NoteListView(noteList);
-    assert.isTrue(noteListView.returnHTML() !== "<ul></ul>");
+    assert.isTrue(noteListView.returnHTML() === "<ul></ul>");
 })();
 
 (function testReturnHTML1Note() {
