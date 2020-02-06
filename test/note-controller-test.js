@@ -18,6 +18,6 @@
     nc.insertElement("app", document2);
     assert.isTrue(
         element.innerHTML ===
-        "<ul><li><div>I am Shaun</div></li><li><div>I am Marcello</div></li></ul>"
+        '<ul><li><a href="#notes/0" id="0">I am Shaun</a></li><li><a href="#notes/1" id="1">I am Marcello</a></li></ul>'
     );
 })();

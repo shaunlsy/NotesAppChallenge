@@ -10,7 +10,7 @@
 })(this);
 
 NoteController.prototype.addNote = function(note) {
-    this.noteList.storeNotes(note.text);
+    this.noteList.storeNotes(note);
 };
 
 NoteController.prototype.insertElement = function(id, doc = document) {

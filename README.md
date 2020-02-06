@@ -6,6 +6,29 @@ Makers Week 7 Afternoon Challenge
 
 - JavaScript front end
 
+### Installation
+
+Installing Node from Terminal
+Check if there's a version installed:
+
+```
+$ node -v
+```
+
+If not, install:
+
+```
+$ brew install node
+```
+
+Initialize Node with Http-Server library from the top level of the project's directory:
+
+```
+$ cd projectfolder/
+$ npm install http-server --save
+$ node node_modules/http-server/bin/http-server
+```
+
 ## User stories
 
 ```
@@ -30,8 +53,13 @@ var note = new Note("Hello")
 var note2 = new Note("Goodbye")
 var note3 = new Note("I am Shaun")
 var noteList = new NoteList()
-noteList.storeNotes(note.text)
-noteList.storeNotes(note2.text)
-noteList.storeNotes(note3.text)
+noteList.storeNotes(note)
+noteList.storeNotes(note2)
+noteList.storeNotes(note3)
 var noteListView = new NoteListView(noteList)
 noteListView.returnHTML()
+var nc = new NoteController()
+nc.addNote(note)
+nc.addNote(note2)
+nc.addNote(note3)
+nc.insertElement("app")
