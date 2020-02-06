@@ -26,8 +26,16 @@ Initialize Node with Http-Server library from the top level of the project's dir
 ```
 $ cd projectfolder/
 $ npm install http-server --save
+```
+
+Running the server from command line:
+
+```
 $ node node_modules/http-server/bin/http-server
 ```
+
+Then visit:
+**localhost://8080**
 
 ## User stories
 
