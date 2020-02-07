@@ -15,40 +15,27 @@
         element.innerHTML = this.noteListView.returnHTML();
     };
 
-    makeUrlChangeDisplayNoteContent();
-
-    function makeUrlChangeDisplayNoteContent() {
-        window.addEventListener("hashchange", showNoteForCurrentPage);
-    }
-
-    function showNoteForCurrentPage() {
-        showNote(this.nc.noteList.array[getNoteFromUrl(window.location)].text);
-    }
-
-    function getNoteFromUrl(location) {
-        return location.hash.split("#notes/")[1];
-    }
-
-    function showNote(note) {
-        document.getElementById("app").innerHTML = note;
-    }
     exports.NoteController = NoteController;
 })(this);
 
-// makeUrlChangeShowAnimalForCurrentPage();
+var nc = new NoteController();
+makeUrlChangeDisplayNoteContent();
 
-// function makeUrlChangeShowAnimalForCurrentPage() {
-//     window.addEventListener("hashchange", showAnimalForCurrentPage);
-// }
+function makeUrlChangeDisplayNoteContent() {
+    window.addEventListener("hashchange", showNoteForCurrentPage);
+}
 
-// function showAnimalForCurrentPage() {
-//     showAnimal(getAnimalFromUrl(window.location));
-// }
+function showNoteForCurrentPage() {
+    var snv = new SingleNoteView(
+        nc.noteList.array[getNoteFromUrl(window.location)].text
+    );
+    showNote(snv.render());
+}
 
-// function getAnimalFromUrl(location) {
-//     return location.hash.split("#")[1];
-// }
+function getNoteFromUrl(location) {
+    return location.hash.split("#notes/")[1];
+}
 
-// function showAnimal(animal) {
-//     document.getElementById("animal").innerHTML = animal;
-// }
+function showNote(note) {
+    document.getElementById("app").innerHTML = note;
+}
