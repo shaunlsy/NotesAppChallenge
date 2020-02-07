@@ -18,6 +18,7 @@
 
     function makeUrlChangeDisplayNoteContent() {
         window.addEventListener("hashchange", showNoteForCurrentPage);
+        event.preventDefault();
     }
 
     function showNoteForCurrentPage() {
