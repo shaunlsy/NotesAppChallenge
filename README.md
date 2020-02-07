@@ -57,9 +57,10 @@ I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
 
-var note = new Note("Hello")
+```
+var note = new Note("Hello this is Shaun. Nice to meet you. How are you today")
 var note2 = new Note("Goodbye See you next time hopefully it's tommorrow cheers")
-var note3 = new Note("I am Shaun")
+var note3 = new Note("I am Shaun. Nice to meet you. Pleasure to speak with you")
 var noteList = new NoteList()
 noteList.storeNotes(note)
 noteList.storeNotes(note2)
@@ -71,3 +72,15 @@ nc.addNote(note)
 nc.addNote(note2)
 nc.addNote(note3)
 nc.insertElement("app")
+```
+
+```
+var note = new Note("Hello this is Shaun. Nice to meet you. How are you today")
+var note2 = new Note("Goodbye See you next time hopefully it's tommorrow cheers")
+var note3 = new Note("I am Shaun. Nice to meet you. Pleasure to speak with you")
+var nc = new NoteController()
+nc.addNote(note)
+nc.addNote(note2)
+nc.addNote(note3)
+nc.insertElement("app")
+```

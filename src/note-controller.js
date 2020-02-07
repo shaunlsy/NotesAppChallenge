@@ -5,6 +5,7 @@
         this.noteList = new NoteList();
         this.noteListView = new NoteListView(this.noteList);
     }
+
     NoteController.prototype.addNote = function(note) {
         this.noteList.storeNotes(note);
     };
@@ -21,7 +22,7 @@
     }
 
     function showNoteForCurrentPage() {
-        showNote(this.noteList.array[getNoteFromUrl(window.location)].text);
+        showNote(this.nc.noteList.array[getNoteFromUrl(window.location)].text);
     }
 
     function getNoteFromUrl(location) {
